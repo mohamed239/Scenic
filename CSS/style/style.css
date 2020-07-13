@@ -1,0 +1,894 @@
+@font-face {
+    font-family: lightFont;
+    src: url(../../fonts/SourceSansPro-Light.woff);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main .first-part {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.main .first-part::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #000;
+    opacity: .8;
+}
+.main .first-part .overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+.main .first-part .overlay div ul {
+    list-style: none;
+    margin-left: 50px;
+}
+.main .first-part .overlay div ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+.main .first-part .overlay div ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.main .first-part .overlay div {
+    width: 50%;
+    float: left;
+}
+.main .first-part .overlay .nav-right ul li {
+    padding: 35px 20px 20px 20px;
+    font-size: 16px;
+    font-family: lightFont;
+    text-transform: uppercase;
+}
+.main .first-part .overlay .nav-right ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width .3s;
+}
+.main .first-part .overlay .nav-right ul li .underline:hover:after {
+    width: 100%;
+    transition: width .3s;
+}
+.main .first-part .overlay .nav-left ul li {
+    padding: 35px ;
+    font-size: 24px;
+    font-family: lightFont;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.main .first-part .overlay .nav-left ul li a{
+    float: right;
+}
+.main .first-part .overlay .write {
+    width: 60%;
+    display: block;
+    float: left;
+    margin-top: 120px;
+    margin-left: 100px;
+}
+.main .first-part .overlay .write h1{
+    color: #fff;
+    font-size: 100px;
+    font-family: lightFont;
+    font-weight: lighter;
+}
+.main .first-part .overlay .write p {
+    color: #999;
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: arial;
+}
+.main .first-part .overlay .write .maincont {
+    position: relative;
+    /* background-color: #4DC47D; */
+    width: 145px;
+    height: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.main .first-part .overlay .write .maincont .thecard {
+    position: absolute;
+    width: 145px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transition: all .7s ease;
+    background: #000;
+    border-radius: 15px;
+}
+.main .first-part .overlay .write .maincont .thecard:hover {
+    transform: rotateX(180deg);
+}
+.main .first-part .overlay .write .maincont .thecard .front {
+    position: absolute;
+    width: 145px;
+    height: 50px;
+    backface-visibility: hidden;
+    background-color: #4DC47D;
+    color: #fff;
+    padding: 15px 20px 10px 20px;
+    font-family: arial;
+    text-transform: capitalize;
+    border-radius: 2px;
+}
+.main .first-part .overlay .write .maincont .thecard .back {
+    position: absolute;
+    width: 145px;
+    height: 50px;
+    backface-visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    transform: rotateX(180deg);
+    padding: 15px 20px 10px 20px;
+    font-family: arial;
+    text-transform: capitalize;
+    border-radius: 2px;
+}
+.second-part {
+    width: 100%;
+    height: 60vh;
+    background-color: #fff;
+}
+.second-part .center-part{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.second-part .center-part .center {
+    margin-top: 220px;
+}
+.second-part .center-part .center h3 {
+    font-family: lightFont;
+    letter-spacing: 6px;
+}
+.second-part .center-part .center h1 {
+    font-size: 40px;
+    font-weight: lighter;
+    font-family: lightFont;
+    margin-top: 25px;
+}
+.part-third {
+    width: 100%;
+    height: 100vh;
+}
+.part-third .first-img {
+    width: 90%;
+    margin: auto;
+    cursor: pointer;
+}
+.part-third .first-img .overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 150px;
+    display: none;
+    transition: .5s all;
+}
+.part-third .first-img .overlay2 p{
+    color: #fff;
+    font-family: lightFont;
+    font-size: 38px;
+    transition: .5s all;
+}
+.part-third .first-img .overlay2 h3 {
+    color: #fff;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .5s all;
+}
+.part-third .first-img .img1:hover .overlay2 {
+    display: block;
+}
+.part-third .first-img .img1 {
+    position: relative;
+    width: 550px;
+    height: 370px;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+.part-third .first-img .img1:before {
+    content: "";
+    width: 550px;
+    height: 370px;
+    position:absolute;
+    background: url(../../imgs/project-image1.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .6s;
+}
+.part-third .first-img .img1:hover:before {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.part-third .first-img .img1::after {
+    content: "";
+    width: 550px;
+    height: 370px;
+    position:absolute;
+    background: #262E3A;
+    z-index: -1;
+}
+/*  */
+.part-third .first-img .overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 150px;
+    display: none;
+    transition: .5s all;
+}
+.part-third .first-img .overlay2 p{
+    color: #fff;
+    font-family: lightFont;
+    font-size: 38px;
+    transition: .5s all;
+}
+.part-third .first-img .overlay2 h3 {
+    color: #fff;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .5s all;
+}
+.part-third .first-img .img2:hover .overlay2 {
+    display: block;
+}
+.part-third .first-img .img2 {
+    position: relative;
+    width: 550px;
+    height: 370px;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+.part-third .first-img .img2:before {
+    content: "";
+    width: 550px;
+    height: 370px;
+    position:absolute;
+    background: url(../../imgs/project-image2.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .6s;
+}
+.part-third .first-img .img2:hover:before {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.part-third .first-img .img2::after {
+    content: "";
+    width: 550px;
+    height: 370px;
+    position:absolute;
+    background: #262E3A;
+    z-index: -1;
+}
+/*  */
+.part-third .first-img .overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 150px;
+    display: none;
+    transition: .5s all;
+}
+.part-third .first-img .overlay2 p{
+    color: #fff;
+    font-family: lightFont;
+    font-size: 38px;
+    transition: .5s all;
+}
+.part-third .first-img .overlay2 h3 {
+    color: #fff;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .5s all;
+}
+.part-third .first-img .img3:hover .overlay2 {
+    display: block;
+}
+.part-third .first-img .img3 {
+    position: relative;
+    width: 550px;
+    height: 370px;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+.part-third .first-img .img3:before {
+    content: "";
+    width: 550px;
+    height: 370px;
+    position:absolute;
+    background: url(../../imgs/project-image3.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .6s;
+}
+.part-third .first-img .img3:hover:before {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.part-third .first-img .img3::after {
+    content: "";
+    width: 550px;
+    height: 370px;
+    position:absolute;
+    background: #262E3A;
+    z-index: -1;
+}
+/*  */
+.part-third .first-img .overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 150px;
+    display: none;
+    transition: .5s all;
+}
+.part-third .first-img .overlay2 p{
+    color: #fff;
+    font-family: lightFont;
+    font-size: 38px;
+    transition: .5s all;
+    margin-bottom: 10px;
+}
+.part-third .first-img .overlay2 h3 {
+    color: #fff;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .5s all;
+}
+.part-third .first-img .img4:hover .overlay2 {
+    display: block;
+}
+.part-third .first-img .img4 {
+    position: relative;
+    width: 550px;
+    height: 370px;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+.part-third .first-img .img4:before {
+    content: "";
+    width: 550px;
+    height: 370px;
+    position:absolute;
+    background: url(../../imgs/project-image4.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .6s;
+}
+.part-third .first-img .img4:hover:before {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.part-third .first-img .img4::after {
+    content: "";
+    width: 550px;
+    height: 370px;
+    position:absolute;
+    background: #262E3A;
+    z-index: -1;
+}
+.forth-part {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+.forth-part .center2 {
+    width: 90%;
+    margin: 300px auto 0;
+}
+.forth-part .center2 h1 {
+    text-align: center;
+    font-family: lightFont;
+    margin-bottom: 100px;
+}
+/*  */
+.forth-part .center2 .imgOne .overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 150px;
+    display: none;
+    transition: .5s all;
+}
+.forth-part .center2 .imgOne .overlay3 li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    margin-top: -150px;
+    padding: 7px 9px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .5s all;
+    text-align: center;
+    cursor: pointer;
+}
+.forth-part .center2 .imgOne .overlay3 li:hover {
+    transform: scale(1.2);
+}
+.forth-part .center2 .imgOne .overlay3 li i{
+    position: relative;
+    color: #000;
+    font-size: 20px;
+    transition: .5s all;
+    text-align: center;
+}
+.forth-part .center2 .imgOne:hover .overlay3 {
+    display: block;
+}
+.forth-part .center2 .imgOne {
+    position: relative;
+    width: 265px;
+    height: 265px;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+.forth-part .center2 .imgOne:before {
+    content: "";
+    width: 265px;
+    height: 265px;
+    position:absolute;
+    background: url(../../imgs/team-image1.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .6s;
+}
+.forth-part .center2 .imgOne:hover:before {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.forth-part .center2 .imgOne:after {
+    content: "";
+    width: 265px;
+    height: 265px;
+    position:absolute;
+    background: #262E3A;
+    z-index: -1;
+}
+/*  */
+.forth-part .center2 .imgTwo .overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 150px;
+    display: none;
+    transition: .5s all;
+}
+.forth-part .center2 .imgTwo .overlay3 li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    margin-top: -150px;
+    padding: 7px 9px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .5s all;
+    text-align: center;
+    cursor: pointer;
+}
+.forth-part .center2 .imgTwo .overlay3 li:hover {
+    transform: scale(1.2);
+}
+.forth-part .center2 .imgTwo .overlay3 li i{
+    position: relative;
+    color: #000;
+    font-size: 20px;
+    transition: .5s all;
+    text-align: center;
+}
+.forth-part .center2 .imgTwo:hover .overlay3 {
+    display: block;
+}
+.forth-part .center2 .imgTwo {
+    position: relative;
+    width: 265px;
+    height: 265px;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+.forth-part .center2 .imgTwo:before {
+    content: "";
+    width: 265px;
+    height: 265px;
+    position:absolute;
+    background: url(../../imgs/team-image2.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .6s;
+}
+.forth-part .center2 .imgTwo:hover:before {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.forth-part .center2 .imgTwo:after {
+    content: "";
+    width: 265px;
+    height: 265px;
+    position:absolute;
+    background: #262E3A;
+    z-index: -1;
+}
+/*  */
+.forth-part .center2 .imgThree .overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 150px;
+    display: none;
+    transition: .5s all;
+}
+.forth-part .center2 .imgThree .overlay3 li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    margin-top: -150px;
+    padding: 7px 9px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .5s all;
+    text-align: center;
+    cursor: pointer;
+}
+.forth-part .center2 .imgThree .overlay3 li:hover {
+    transform: scale(1.2);
+}
+.forth-part .center2 .imgThree .overlay3 li i{
+    position: relative;
+    color: #000;
+    font-size: 20px;
+    transition: .5s all;
+    text-align: center;
+}
+.forth-part .center2 .imgThree:hover .overlay3 {
+    display: block;
+}
+.forth-part .center2 .imgThree {
+    position: relative;
+    width: 265px;
+    height: 265px;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+.forth-part .center2 .imgThree:before {
+    content: "";
+    width: 265px;
+    height: 265px;
+    position:absolute;
+    background: url(../../imgs/team-image3.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .6s;
+}
+.forth-part .center2 .imgThree:hover:before {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.forth-part .center2 .imgThree:after {
+    content: "";
+    width: 265px;
+    height: 265px;
+    position:absolute;
+    background: #262E3A;
+    z-index: -1;
+}
+/*  */
+.forth-part .center2 .imgFour .overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 150px;
+    display: none;
+    transition: .5s all;
+}
+.forth-part .center2 .imgFour .overlay3 li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    margin-top: -150px;
+    padding: 7px 9px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .5s all;
+    text-align: center;
+    cursor: pointer;
+}
+.forth-part .center2 .imgFour .overlay3 li:hover {
+    transform: scale(1.2);
+}
+.forth-part .center2 .imgFour .overlay3 li i{
+    position: relative;
+    color: #000;
+    font-size: 20px;
+    transition: .5s all;
+    text-align: center;
+}
+.forth-part .center2 .imgFour:hover .overlay3 {
+    display: block;
+}
+.forth-part .center2 .imgFour {
+    position: relative;
+    width: 265px;
+    height: 265px;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+.forth-part .center2 .imgFour:before {
+    content: "";
+    width: 265px;
+    height: 265px;
+    position:absolute;
+    background: url(../../imgs/team-image4.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .6s;
+}
+.forth-part .center2 .imgFour:hover:before {
+    transform: scale(1.1);
+    opacity: .5;
+}
+.forth-part .center2 .imgFour:after {
+    content: "";
+    width: 265px;
+    height: 265px;
+    position:absolute;
+    background: #262E3A;
+    z-index: -1;
+}
+.forth-part .names {
+    width: 100%;
+}
+.forth-part .names .name1 {
+    float: left;
+    text-align: center;
+}
+.forth-part .names .name1 p {
+    font-size: 16px;
+    font-family: lightFont;
+    color: #757575;
+}
+.forth-part .names .name1 h3 {
+    font-size: 20px;
+    font-family: lightFont;
+    font-weight: bold;
+}
+.forth-part .names .nameOne {
+    margin-left: 105px;
+}
+.forth-part .names .nameTwo {
+    margin-left: 170px;
+}
+.forth-part .names .nameThree {
+    margin-left: 200px;
+}
+.forth-part .names .nameFour {
+    margin-left: 170px;
+}
+.part-five {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: url(../../imgs/contact-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.part-five .center3 {
+    width: 100%;
+    margin:auto;
+}
+.part-five form {
+    display: inline-block;
+    margin-top: 90px;
+}
+.part-five form h1 {
+    font-family: lightFont;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.part-five form .nameAndEmail {
+    float: left;
+}
+.part-five form .nAg {
+    margin-right: 20px;
+}
+.part-five form .nameAndEmail input {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    width: 350px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.part-five .center3 form .subject input {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    width: 720px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.part-five .center3 form div textarea {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    width: 720px;
+    text-transform: capitalize;
+    font-family: arial;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.part-five .center3 form input[type="submit"] {
+    padding: 14px 22px;
+    font-size: 18px;
+    border: none;
+    background-color: #4DC47D;
+    text-transform: capitalize;
+    font-family: arial;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.six-part {
+    width: 100%;
+    height: 80vh;
+}
+.six-part .center4 {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.six-part .center4 .title {
+    float: left;
+    margin-top: 100px;
+}
+.six-part .center4 .title h1 {
+    margin-bottom: 20px;
+    font-family: lightFont;
+}
+.six-part .center4 .title p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: lightFont;
+    color: #757575;
+}
+.six-part .center4 .title .copyright {
+    margin-top: 100px;
+}
+.six-part .center4 .keep-in-touch p{
+    transition: all 1s;
+    margin-bottom: 20px;
+}
+.six-part .center4 .keep-in-touch p:hover {
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.six-part .center4 .about-us .icons {
+    text-align: center;
+}
+.six-part .center4 .about-us .icons i{
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all .5s;
+    color: #292929;
+}
+.six-part .center4 .about-us .icons i:hover {
+    transform: scale(1.2);
+}
+
+/*  */
+
+.part-five .center3 form .maincont {
+    position: relative;
+    width: 145px;
+    height: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-left: 285px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.part-five .center3 form .maincont .thecard {
+    position: absolute;
+    width: 145px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transition: all .7s ease;
+    background: #000;
+    border-radius: 15px;
+}
+.part-five .center3 form .maincont .thecard:hover {
+    transform: rotateX(180deg);
+}
+.part-five .center3 form .maincont .thecard .front {
+    position: absolute;
+    width: 145px;
+    height: 50px;
+    backface-visibility: hidden;
+    background-color: #4DC47D;
+    color: #fff;
+    padding: 15px 20px 10px 20px;
+    font-family: arial;
+    text-transform: capitalize;
+    border-radius: 2px;
+}
+.part-five .center3 form .maincont .thecard .back {
+    position: absolute;
+    width: 145px;
+    height: 50px;
+    backface-visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    transform: rotateX(180deg);
+    padding: 15px 20px 10px 20px;
+    font-family: arial;
+    text-transform: capitalize;
+    border-radius: 2px;
+}
